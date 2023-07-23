@@ -1,6 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
+import LocalFont from "@next/font/local";
+
+const nameFont = LocalFont({
+  src: "../public/fonts/Roboto-ThinItalic.ttf",
+  variable: "--font-name",
+})
 
 const navigation = [
   { name: "Projects", href: "/projects" },
@@ -26,14 +34,11 @@ export default function Home() {
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-blue900/0 via-indigo-900/50 to-slate-900/0" />
 
-      <Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={100} />
+      <Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={700} />
 
-      <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
-        <span className="animate-bounce">N</span>
-        <span className="animate-bounce">e</span>
-        <span className="animate-bounce">k</span>
-        <span className="animate-bounce">o</span>
-        <span className="ml-2">Code</span>
+      <h1 className={`z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ${nameFont.variable}`}>
+        <span className="animate-bounce">Jose</span>
+        <span className="ml-2">Espinoza</span>
       </h1>
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-blue-900/0 via-indigo-900/50 to-slate-900/0" />

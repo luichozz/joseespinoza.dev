@@ -64,14 +64,8 @@ export default async function ProjectsPage() {
                         <span>SOON</span>
                       )}
                     </div>
-                    <span className="flex items-center gap-1 text-xs text-gray-500">
-                      <Eye className="w-4 h-4" />{" "}
-                      {Intl.NumberFormat("en-US", { notation: "compact" }).format(
-                        views[featured.slug] ?? 0
-                      )}
-                    </span>
-                  </div>
-
+                    </div>
+(               
                   <h2 className="mt-4 text-3xl font-bold text-white group-hover:text-gray-50 sm:text-4xl font-display">
                     {featured.title}
                   </h2>
@@ -87,14 +81,7 @@ export default async function ProjectsPage() {
               </Link>
             </Card>
 
-            <div className="grid grid-cols-1 gap-8 md:gap-16 lg:gap-16 xl:gap-20">
-              <Card>
-                <Article project={top2} views={views[top2.slug] ?? 0} />
-              </Card>
-              <Card>
-                <Article project={top3} views={views[top3.slug] ?? 0} />
-              </Card>
-            </div>
+            
           </div>
         ) : (
 			<p className="mt-4 text-gray-300">
@@ -105,11 +92,6 @@ export default async function ProjectsPage() {
         <div className="hidden mt-16 w-full h-px md:block bg-indigo-700" />
 
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {sorted.map((project, index) => (
-            <Card key={project.slug}>
-              <Article project={project} views={views[project.slug] ?? 0} />
-            </Card>
-          ))}
         </div>
       </div>
     </div>
