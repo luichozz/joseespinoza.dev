@@ -29,6 +29,7 @@
     "pnpm": "^8.6.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-spring": "^9.7.2",
     "react-tools": "^0.13.3",
     "react-tooltip": "^5.18.1",

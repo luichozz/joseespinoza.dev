@@ -4,34 +4,35 @@ import Link from "next/link";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Tooltip } from "react-tooltip"; // Import the Tooltip component from react-tooltip
+import React from "react";
 
 const socials = [
   {
-    icon: <LucideLinkedin size={20} />,
+    icon: <LucideLinkedin size={30} />,
     href: "https://www.linkedin.com/in/jose-espinozaglz/",
     label: "Linkedin",
     handle: "Jose-espinozaglz",
   },
   {
-    icon: <Mail size={20} />,
+    icon: <Mail size={30} />,
     href: "mailto:contact@joseespinozadev.com",
     label: "Email",
     handle: "contact@joseespinozadev.com",
   },
   {
-    icon: <Github size={20} />,
+    icon: <Github size={30} />,
     href: "https://github.com/luichozz",
     label: "Github",
     handle: "luichozz",
   },
 ];
 
-export default function Example() {
+export default function Contact() {
   return (
-    <div className="bg-gradient-to-tl from-blue-900/0 via-indigo-900 to-slate-900/0">
+    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-blue-200/0 via-indigo-200/20 to-slate-200/0">
       <Navigation />
-      <div className="container max-w-7x2 mx-auto flex items-center justify-center min-h-screen px-4">
-        <div className="grid grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16 max-w-7x2">
+      <div className="container max-w-9x8 mx-auto flex items-center justify-center min-h-screen px-4">
+        <div className="grid grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-2 max-w-9x8">
           {socials.map((s) => (
             <Card key={s.label}>
               <Link
